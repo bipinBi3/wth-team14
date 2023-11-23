@@ -58,7 +58,7 @@ jobs:
            creds: ${{ secrets.AZURE_CREDENTIALS }}
         - uses: azure/webapps-deploy@v2
           with: 
-            app-name: '43drodsg27nak-//${{ env.enviroment }}'
+            app-name: '43drodsg27nak-${{ env.enviroment }}'
             images: '43drodsg27nakwthreg.azurecr.io/43drodsg27nak/wthimage'
 
       
