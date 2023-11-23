@@ -2,7 +2,8 @@
 
   on:
     workflow_dispatch:
-
+  env:
+    WORKING_DIRECTORY: "wth-team14"
   jobs:
     job1:
       runs-on: ubuntu-latest
