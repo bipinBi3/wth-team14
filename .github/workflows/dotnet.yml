@@ -7,11 +7,11 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - '${{ env.WORKING_DIRECTORY }}'
+      - 'Application'
   pull_request:
     branches: [ "main" ]
     paths:
-      - '${{ env.WORKING_DIRECTORY }}'
+      - 'Application'
 env:
   WORKING_DIRECTORY: "wth-team14/Application"
 
