@@ -1,14 +1,7 @@
   name: challenge 5
 
   on:
-    #workflow_dispatch:
-    workflow_call:
-      inputs:
-        environment:
-          description: 'The name of the environment, e.g. dev, test prod'
-          default: 'dev'
-          required: true
-          type: string
+    workflow_dispatch:
   env:
     WORKING_DIRECTORY: "wth-team14"
   jobs:
