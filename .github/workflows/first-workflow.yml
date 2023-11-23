@@ -33,4 +33,7 @@ jobs:
       steps:
         - name: Cowsays
           uses: mscoutermarsh/cowsays-action@v1
+          with:
+            text: 'Hello World!'
+            color: 'red'
             
