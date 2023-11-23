@@ -75,7 +75,7 @@ jobs:
     needs: docker-build-and-push
     environment:
       name: dev
-      url: https://devopsreg-dev.azurewebsites.net/
+      url: https://43drodsg27nak-dev.azurewebsites.net/
     
     steps:
       - name: 'Login via Azure CLI'
@@ -94,7 +94,7 @@ jobs:
     needs: deploy-to-dev
     environment:
       name: test
-      url: https://devopsreg-test.azurewebsites.net/
+      url: https://43drodsg27nak-test.azurewebsites.net/
     
     steps:
     - uses: actions/checkout@v3
@@ -115,7 +115,7 @@ jobs:
     needs: deploy-to-test
     environment:
       name: prod
-      url: https://devopsreg-prod.azurewebsites.net/
+      url: https://43drodsg27nak-prod.azurewebsites.net/
     
     steps:
     - uses: actions/checkout@v3
