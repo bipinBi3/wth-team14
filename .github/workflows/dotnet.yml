@@ -13,7 +13,7 @@ on:
     paths:
       - 'Application/**'
 env:
-  WORKING_DIRECTORY: "wth-team14/Application"
+  WORKING_DIRECTORY: "./Application"
 
 jobs:
   build:
