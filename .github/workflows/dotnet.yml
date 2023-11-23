@@ -86,7 +86,7 @@ jobs:
       - uses: azure/webapps-deploy@v2
         with:
           app-name: '43drodsg27nak-dev'
-          images: wth/dotnetcoreapp:${{github.run_number}}
+          images:  ${{secrets.ACR_USERNAME}}/wth/dotnetcoreapp:${{github.run_number}}
 
   deploy-to-test:
   
@@ -107,7 +107,7 @@ jobs:
     - uses: azure/webapps-deploy@v2
       with:
         app-name: '43drodsg27nak-test'
-        images: wth/dotnetcoreapp:${{github.run_number}}
+        images:  ${{secrets.ACR_USERNAME}}/wth/dotnetcoreapp:${{github.run_number}}
 
   deploy-to-prod:
   
@@ -128,4 +128,4 @@ jobs:
     - uses: azure/webapps-deploy@v2
       with:
         app-name: '43drodsg27nak-prod'
-        images: wth/dotnetcoreapp:${{github.run_number}}
+        images:  ${{secrets.ACR_USERNAME}}/wth/dotnetcoreapp:${{github.run_number}}
