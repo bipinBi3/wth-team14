@@ -30,4 +30,7 @@ jobs:
           echo test, and deploy your project.
   job2:
       runs-on: ubuntu-latest
-  
+      steps:
+        - name: Cowsays
+          uses: mscoutermarsh/cowsays-action@v1
+            
