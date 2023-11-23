@@ -85,7 +85,7 @@ jobs:
 
       - uses: azure/webapps-deploy@v2
         with:
-          app-name: 'devopsreg-dev'
+          app-name: '43drodsg27nak-dev'
           images: ${{secrets.ACR_NAME}}/wth/razorcore:${{github.run_number}}
 
   deploy-to-test:
@@ -106,7 +106,7 @@ jobs:
 
     - uses: azure/webapps-deploy@v2
       with:
-        app-name: 'devopsreg-test'
+        app-name: '43drodsg27nak-test'
         images: ${{secrets.ACR_NAME}}/wth/razorcore:${{github.run_number}}
 
   deploy-to-prod:
@@ -127,5 +127,5 @@ jobs:
 
     - uses: azure/webapps-deploy@v2
       with:
-        app-name: 'devopsreg-prod'
+        app-name: '43drodsg27nak-prod'
         images: ${{secrets.ACR_NAME}}/wth/razorcore:${{github.run_number}}
