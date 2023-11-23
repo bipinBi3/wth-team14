@@ -1,4 +1,4 @@
-  name: challenge 5
+  name: Deploy to Azure - Challenge 5
 
   on:
     workflow_dispatch:
