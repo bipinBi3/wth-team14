@@ -45,15 +45,13 @@ jobs:
   job2:
       runs-on: ubuntu-latest
       steps:
+        - uses: actions/checkout@v2
         - name: "Docker Login"
-        - uses: actions/checkout@v2
-        - run: docker login $registryName -u ${{ secrets.ACR_USERNAME }} -p ${{ secrets.ACR_PASSWORD }}
+          run: docker login $registryName -u ${{ secrets.ACR_USERNAME }} -p ${{ secrets.ACR_PASSWORD }}
         - name: "Docker build"
-        - uses: actions/checkout@v2
-        - run: docker build -t $registryName/$repositoryName:$tag --build-arg build_version=$tag $dockerFolderPath
+          run: docker build -t $registryName/$repositoryName:$tag --build-arg build_version=$tag $dockerFolderPath
         - name: "Docker push"
-        - uses: actions/checkout@v2
-        - run: docker push $registryName/$repositoryName:$tag
+          run: docker push $registryName/$repositoryName:$tag
         
 
   
