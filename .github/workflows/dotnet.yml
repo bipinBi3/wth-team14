@@ -18,6 +18,7 @@ env:
   repositoryName: "wth/dotnetcoreapp"
   dockerFolderPath: 'Application/src/RazorPagesTestSample'
   tag: "${{ github.run_number }}"
+  enviroment: "dev"
   
 
 jobs:
@@ -52,6 +53,14 @@ jobs:
           run: docker build -t $registryName/$repositoryName:$tag  --build-arg build_version=$tag $dockerFolderPath
         - name: "Docker push"
           run: docker push $registryName/$repositoryName:$tag
+        - uses: azure/login@v1
+          with:
+           creds: ${{ secrets.AZURE_CREDENTIALS }}
+        - uses: azure/webapps-deploy@v2
+          with: 
+            app-name: '43drodsg27nak-//${{ env.enviroment }}'
+            images: '43drodsg27nakwthreg.azurecr.io/43drodsg27nak/wthimage'
+
       
 
   
