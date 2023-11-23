@@ -14,10 +14,14 @@ on:
       - 'Application/**'
 env:
   WORKING_DIRECTORY: "./Application"
+  registryName: "43drodsg27nakwthreg.azurecr.io"
+  repositoryName: "wth/dotnetcoreapp"
+  dockerFolderPath: 'Application/src/RazorPagesTestSample'
+  tag: "{{ github.run_number }}"
+  
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -38,3 +42,17 @@ jobs:
       run: dotnet test --no-build --verbosity normal
       working-directory:
           '${{ env.WORKING_DIRECTORY }}/src/RazorPagesTestSample'
+  job2:
+      runs-on: ubuntu-latest
+      steps:
+        - name: "Docker Login"
+        - uses: actions/checkout@v2
+        - run: docker login $registryName -u ${{ secrets.ACR_USERNAME }} -p ${{ secrets.ACR_PASSWORD }}
+        - name: "Docker build"
+        - run: docker build -t $registryName/$repositoryName:$tag --build-arg build_version=$tag $dockerFolderPath
+        - name: "Docker push"
+        - run: docker push $registryName/$repositoryName:$tag
+        
+
+  
+      
