@@ -29,12 +29,12 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore 
       working-directory:
-          '${{ env.WORKING_DIRECTORY }}/src/RazorPagesTestSample'
+          './src/RazorPagesTestSample'
     - name: Build
       run: dotnet build --no-restore 
       working-directory:
-          '${{ env.WORKING_DIRECTORY }}/src/RazorPagesTestSample'
+          './src/RazorPagesTestSample'
     - name: Test
       run: dotnet test --no-build --verbosity normal
       working-directory:
-          '${{ env.WORKING_DIRECTORY }}/src/RazorPagesTestSample'
+          './src/RazorPagesTestSample'
