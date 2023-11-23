@@ -7,13 +7,13 @@ on:
   push:
     branches: [ "main" ]
     paths:
-      - '/.Applications'    
+      - './Application'    
   pull_request:
     branches: [ "main" ]
     paths:
-      - './Applications'    
+      - './Application'    
 env:
-  WORKING_DIRECTORY: "wth-team14/Applications"
+  WORKING_DIRECTORY: "wth-team14/Application"
 
 jobs:
   build:
