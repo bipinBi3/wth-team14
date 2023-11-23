@@ -22,7 +22,7 @@
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           resourceGroupName: ${{ vars.RESOURCE_GROUP_NAME }}
-          template: ../InfrastructureAsCode/main.bicep
+          template: ./InfrastructureAsCode/main.bicep
           #parameters: ''
           failOnStdErr: false
                       
