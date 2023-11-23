@@ -1,7 +1,7 @@
   name: challenge 5
 
   on:
-    workflow_dispatch:
+    #workflow_dispatch:
     workflow_call:
       inputs:
         environment:
