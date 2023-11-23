@@ -1,7 +1,7 @@
 name: CI
 
 env:
-  registryName: devopsreg.azurecr.io
+  registryName: 43drodsg27nakwthreg.azurecr.io
   repositoryName: wth/razorcore
   dockerfilePath: Application/src/RazorPagesTestSample
   tag: ${{github.run_number}}
