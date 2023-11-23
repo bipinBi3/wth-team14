@@ -1,4 +1,4 @@
-  name: challenge 4
+  name: challenge 5
 
   on:
     workflow_dispatch:
@@ -21,7 +21,7 @@
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           resourceGroupName: ${{ vars.RESOURCE_GROUP_NAME }}
-          template: ../InfrastructueAsCode/main.bicep
+          template: ../InfrastructureAsCode/main.bicep
           #parameters: ''
           failOnStdErr: false
                       
