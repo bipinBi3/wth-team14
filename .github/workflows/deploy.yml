@@ -5,10 +5,10 @@
     workflow_call:
       inputs:
         environment:
-        description: 'The name of the environment, e.g. dev, test prod'
-        default: 'dev'
-        required: true
-        type: string
+          description: 'The name of the environment, e.g. dev, test prod'
+          default: 'dev'
+          required: true
+          type: string
   env:
     WORKING_DIRECTORY: "wth-team14"
   jobs:
